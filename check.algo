@@ -1,0 +1,31 @@
+ALGORITHM nb_phrase
+VAR 
+//declaration of variables
+car_nb, voy_nb, mot_nb: INTEGER;
+ph:STRING;
+car_courant:CHAR;
+BEGIN
+car_nb:=0;
+voy_nb:=0;
+mot_nb:=1;
+Write("entrer la phrase");
+Read(ph);
+car_courant:=ph[0];
+//loop to check the number of characters, vowels and words
+WHILE (car_courant <> '.') DO
+car_nb:=car_nb+1;
+//condition to check if the character is a vowel
+IF (car_courant = 'a' OR car_courant = 'o' OR car_courant = 'i' OR car_courant = 'u' ORcar_courant = 'A' OR car_courant = 'O' ORcar_courant = 'U' ORcar_courant = 'I' ) THEN
+    voy_nb:=voy_nb+1;
+END_IF
+IF (car_courant = ' ') THEN
+    mot_nb:=mot_nb+1;
+END_IF
+    //increment the character
+car_courant:=ph[car_nb];
+END_WHILE
+Write("le nombre de caractere est ",car_nb);
+Write("le nombre de voyelle est ",voy_nb);
+Write("le nombre de mot est ",mot_nb);
+END
+
