@@ -5,9 +5,9 @@ car_nb, voy_nb, mot_nb: INTEGER;
 ph:STRING;
 car_courant:CHAR;
 BEGIN
-car_nb:=0;
+car_nb:=1;
 voy_nb:=0;
-mot_nb:=1;
+mot_nb:=0;
 Write("entrer la phrase");
 Read(ph);
 car_courant:=ph[0];
@@ -22,7 +22,7 @@ IF (car_courant = ' ') THEN
     mot_nb:=mot_nb+1;
 END_IF
     //increment the character
-car_courant:=ph[car_nb];
+car_courant:=ph[car_nb-1];
 END_WHILE
 Write("le nombre de caractere est ",car_nb);
 Write("le nombre de voyelle est ",voy_nb);
